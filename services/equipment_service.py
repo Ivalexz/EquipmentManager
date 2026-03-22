@@ -7,7 +7,7 @@ class EquipmentService:
     def get_all_equipment(self):
         return self.equipment_list
 
-    def get_equipment_by_id(self, equipment_id:int):
+    def get_equipment_by_id(self, equipment_id):
         item_res=None
         for item in self.equipment_list:
             if item.id == equipment_id:
@@ -15,7 +15,9 @@ class EquipmentService:
                 break
         return item_res
 
-    def add_equipment(self, equipment: Equipment):
+    def add_equipment(self, equipment):
+        if self.get_equipment_by_id(equipment.id):
+            return None
         self.equipment_list.append(equipment)
         return equipment
 

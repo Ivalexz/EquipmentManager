@@ -16,3 +16,8 @@ class EquipmentStatus(Enum):
     broken = "Broken"
     in_storage = "In Storage"
     lost = "Lost"
+
+class IssueStatus(Enum):
+    in_progress = "In Progress"
+    resolved = "Resolved"
+    not_resolved = "Not Resolved"

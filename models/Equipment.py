@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from enums import EquipmentType, EquipmentStatus
+from models.enums import EquipmentType, EquipmentStatus
 
 
 class Equipment(BaseModel):
