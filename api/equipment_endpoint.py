@@ -21,5 +21,4 @@ def add_equipment(equipment: Equipment):
 
 @router.patch("/equipment/{id}/status")
 def update_status(id: int, new_status: EquipmentStatus):
-    return service.update_status(id, new_status)\
-
+    return service.update_status(id, new_status)
